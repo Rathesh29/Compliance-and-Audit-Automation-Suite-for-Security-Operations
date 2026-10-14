@@ -1,0 +1,67 @@
+import enum
+
+
+class UserRole(str, enum.Enum):
+    ADMIN = "ADMIN"
+    SUPERVISOR = "SUPERVISOR"
+    AUDITOR = "AUDITOR"
+    GUARD = "GUARD"
+
+
+class UserStatus(str, enum.Enum):
+    ACTIVE = "ACTIVE"
+    INACTIVE = "INACTIVE"
+    SUSPENDED = "SUSPENDED"
+
+
+class AssignmentStatus(str, enum.Enum):
+    SCHEDULED = "SCHEDULED"
+    ASSIGNED = "ASSIGNED"
+    CHECKED_IN = "CHECKED_IN"
+    COMPLETED = "COMPLETED"
+    MISSED = "MISSED"
+
+
+class AttendanceType(str, enum.Enum):
+    CHECK_IN = "CHECK_IN"
+    CHECK_OUT = "CHECK_OUT"
+
+
+class ViolationType(str, enum.Enum):
+    LATE_CHECKIN = "LATE_CHECKIN"
+    MISSED_SHIFT = "MISSED_SHIFT"
+    OVERSCHEDULED = "OVERSCHEDULED"
+    INSUFFICIENT_REST = "INSUFFICIENT_REST"
+    GPS_VIOLATION = "GPS_VIOLATION"
+    QR_VIOLATION = "QR_VIOLATION"
+    INVALID_CHECKOUT = "INVALID_CHECKOUT"
+    UNAUTHORIZED_ASSIGNMENT = "UNAUTHORIZED_ASSIGNMENT"
+    OVERTIME_VIOLATION = "OVERTIME_VIOLATION"
+
+
+class ViolationSeverity(str, enum.Enum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+    CRITICAL = "CRITICAL"
+
+
+class ExceptionStatus(str, enum.Enum):
+    OPEN = "OPEN"
+    RESOLVED = "RESOLVED"
+
+
+class ReportType(str, enum.Enum):
+    COMPLIANCE = "COMPLIANCE"
+    INCIDENT = "INCIDENT"
+    ATTENDANCE_SUMMARY = "ATTENDANCE_SUMMARY"
+
+
+class NotificationType(str, enum.Enum):
+    MISSED_SHIFT = "MISSED_SHIFT"
+    LATE_CHECKIN = "LATE_CHECKIN"
+    GPS_VIOLATION = "GPS_VIOLATION"
+    QR_VIOLATION = "QR_VIOLATION"
+    OVERTIME = "OVERTIME"
+    COMPLIANCE_BREACH = "COMPLIANCE_BREACH"
+    EXCEPTION_CREATED = "EXCEPTION_CREATED"
